@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import { 
-  Search, BrainCircuit, ExternalLink, Github, Linkedin, Mail, MapPin, 
-  ChevronRight, Download, Menu, X, Terminal, Cpu, Database, Network,
-  Zap, Code2, LineChart
+  Search, BrainCircuit, Mail, MapPin, 
+  ChevronRight, Download, Menu, X, Cpu, Network, Zap
 } from 'lucide-react';
 
 // --- DATA DEFINITIONS ---
@@ -77,16 +76,6 @@ const EMBEDDING_NODES = [
   { label: 'C++', x: 65, y: 90, color: 'bg-red-400', shadow: 'shadow-red-500/50' },
   { label: 'Innovation', x: 80, y: 85, color: 'bg-yellow-400', shadow: 'shadow-yellow-500/50' },
 ];
-
-const SectionHeading = ({ title, subtitle, icon: Icon }) => (
-  <div className="flex items-center space-x-3 mb-6">
-    {Icon && <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20"><Icon size={20} /></div>}
-    <div>
-      <h2 className="text-xl font-bold text-white uppercase tracking-wider">{title}</h2>
-      {subtitle && <p className="text-sm text-slate-400">{subtitle}</p>}
-    </div>
-  </div>
-);
 
 const Card = ({ children, className = "" }) => (
   <div className={`bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-2xl p-6 shadow-xl ${className}`}>
@@ -702,8 +691,8 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {[
             { icon: Mail, label: 'Email', value: 'joaopaulogbdev@gmail.com', desc: 'I usually reply within 24h.' },
-            { icon: Github, label: 'GitHub', value: 'github.com/joaopaulogb', desc: 'Check out my repositories.' },
-            { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/joaopaulogb', desc: "Let's connect professionally." },
+            { icon: Network, label: 'GitHub', value: 'github.com/joaopaulogb', desc: 'Check out my repositories.' },
+            { icon: BrainCircuit, label: 'LinkedIn', value: 'linkedin.com/in/joaopaulogb', desc: "Let's connect professionally." },
             { icon: MapPin, label: 'Location', value: 'Salvador, Bahia, Brazil', desc: 'UTC -3' },
           ].map((item, i) => (
             <div key={i} className="bg-slate-900/40 border border-slate-800 rounded-xl p-4 flex flex-col hover:border-blue-500/30 transition-colors">
@@ -929,8 +918,8 @@ export default function App() {
             © {new Date().getFullYear()} João Paulo Gomes Bernardino. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-slate-500">
-            <a href="#" className="hover:text-white transition-colors"><Github size={18} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Linkedin size={18} /></a>
+            <a href="#" className="hover:text-white transition-colors"><Network size={18} /></a>
+            <a href="#" className="hover:text-white transition-colors"><BrainCircuit size={18} /></a>
             <a href="#" className="hover:text-white transition-colors"><Mail size={18} /></a>
           </div>
         </div>

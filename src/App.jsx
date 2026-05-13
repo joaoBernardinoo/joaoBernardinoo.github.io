@@ -3,6 +3,7 @@ import {
   Search, BrainCircuit, Mail, MapPin, 
   ChevronRight, Download, Menu, X, Cpu, Network, Zap
 } from 'lucide-react';
+import heroImage from './assets/hero.png';
 
 // --- DATA DEFINITIONS ---
 
@@ -833,8 +834,8 @@ export default function App() {
                  </div>
                  <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-3xl overflow-hidden border-2 border-slate-700 shadow-[0_0_30px_rgba(59,130,246,0.15)] group">
                     {/* Placeholder image resembling the young man in the reference */}
-                    <img 
-                      src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop" 
+                     <img 
+                      src={heroImage}
                       alt="João Paulo Gomes Bernardino" 
                       className="w-full h-full object-cover filter contrast-110 saturate-50 group-hover:saturate-100 transition-all duration-500"
                     />

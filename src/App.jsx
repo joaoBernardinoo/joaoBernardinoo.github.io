@@ -3,7 +3,7 @@ import {
   Search, BrainCircuit, Mail, MapPin, 
   ChevronRight, Download, Menu, X, Cpu, Network, Zap
 } from 'lucide-react';
-import heroImage from './assets/hero.png';
+import heroImage from './assets/profile_picture.jpg';
 
 // --- DATA DEFINITIONS ---
 
@@ -59,9 +59,8 @@ const TIMELINE = [
   { id: 'BOS', label: '<BOS>', type: 'special' },
   { id: 'ufba', label: 'UFBA', title: 'CS Student', date: '2022 – Present', desc: 'Computer Science student at Universidade Federal da Bahia.', color: 'blue' },
   { id: 'research', label: 'Research', title: 'AI & Vision', date: '2023', desc: 'Academic research in AI, Computer Vision and Data Science.', color: 'purple' },
-  { id: 'pier', label: 'Pier X', title: 'AI Intern', date: '2024', desc: 'AI Developer Intern at Pier X Solutions.', color: 'orange' },
-  { id: 'deloitte', label: 'Deloitte Apps', title: 'Applications', date: '2024', desc: 'Solutions at Deloitte – Applications Developer.', color: 'teal' },
-  { id: 'future', label: 'Future', title: 'Building Impact', date: '∞', desc: 'Continuing to build intelligent systems and drive innovation.', color: 'pink' },
+  { id: 'pier', label: 'Pier X', title: 'AI Intern', date: '2024', desc: 'AI Developer Intern at Pier X Solutions.', color: 'teal' },
+  { id: 'portobelo', label: 'portobelo', title: 'AI Engineer', date: '∞', desc: 'Development of MCP tools for legacy civil construction ERPs', color: 'red' },
   { id: 'EOS', label: '<EOS>', type: 'special' },
 ];
 

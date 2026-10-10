@@ -99,6 +99,24 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            isolation: isolate;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: -4rem;
+            left: 0;
+            height: 12rem;
+            pointer-events: none;
+            background: linear-gradient(to bottom, transparent, var(--bg) 75%);
+        }
+
+        .hero > :not(.particles):not(.scroll-line) {
+            position: relative;
+            z-index: 2;
         }
 
         .hero-name {
@@ -140,6 +158,8 @@
             inset: 0;
             overflow: hidden;
             pointer-events: none;
+            -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
         }
 
         .particle {
@@ -795,7 +815,8 @@
             gap: 2rem;
         }
 
-        .nav-links a {
+        .nav-links a,
+        .nav-cv {
             color: var(--text);
             text-decoration: none;
             font-size: 0.8125rem;
@@ -804,7 +825,11 @@
             position: relative;
         }
 
-        .nav-links a::after {
+        .nav-cv {
+            font-family: 'DM Mono', monospace;
+        }
+
+        .nav-cv::after {
             content: '';
             position: absolute;
             bottom: -4px;
@@ -816,7 +841,8 @@
         }
 
         .nav-links a:hover::after,
-        .nav-links a.is-active::after {
+        .nav-links a.is-active::after,
+        .nav-cv:hover::after {
             width: 100%;
         }
 
@@ -930,7 +956,10 @@
 
     <!-- Nav -->
     <nav class="nav">
-        <div class="nav-logo">JB</div>
+        <!-- <div class="nav-logo">João Bernardino</div> -->
+        <div>
+            <a class="nav-cv" href="public/joao_bernardino_cv_261009_225618-1.pdf" download="joao_bernardino_cv.pdf">Download CV</a>
+        </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#work">Work</a>
@@ -1344,7 +1373,7 @@
         });
 
         // Parallax on scroll
-        gsap.to('.hero-name', {
+        gsap.to('.hero-name, .hero-role', {
             scrollTrigger: {
                 trigger: '.hero',
                 start: 'top top',
